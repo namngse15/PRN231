@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace BusinessObject.Models
 {
@@ -14,6 +15,13 @@ namespace BusinessObject.Models
         public int EmployeeId { get; set; }
         public string LastName { get; set; } = null!;
         public string FirstName { get; set; } = null!;
+        public string FullName
+        {
+            get
+            {
+                return LastName + " " + FirstName;
+            }
+        }
         public int? DepartmentId { get; set; }
         public string? Title { get; set; }
         public string? TitleOfCourtesy { get; set; }
@@ -22,7 +30,11 @@ namespace BusinessObject.Models
         public string? Address { get; set; }
 
         public virtual Department? Department { get; set; }
+
+        [JsonIgnore]
         public virtual ICollection<Account> Accounts { get; set; }
+
+        [JsonIgnore]
         public virtual ICollection<Order> Orders { get; set; }
     }
 }

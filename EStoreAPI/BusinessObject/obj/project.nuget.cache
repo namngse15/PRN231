@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U64l9oBjtbpN6PNr7iUfuiwt3vootONyufW575Z9y85DWKlDWRjMnxyWV4w02NKuCKuwzYk2yxIVElLhzidRlA==",
+  "dgSpecHash": "qNDkpKvUj59Cm4mWOXjEw/rl6fEy+voO3yAuIPdgkdH3MmqR3AlvN4JDIJZLeeyfrPSlnEuSK6Br4UAgaSFdpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Namkkkkk\\Documents\\GitHub\\EStoreAPI\\BusinessObject\\BusinessObject.csproj",
+  "projectFilePath": "C:\\Users\\Namkkkkk\\Documents\\GitHub\\PRN231\\EStoreAPI\\BusinessObject\\BusinessObject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Namkkkkk\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Namkkkkk\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

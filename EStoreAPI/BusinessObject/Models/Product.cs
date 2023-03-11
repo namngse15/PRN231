@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace BusinessObject.Models
 {
@@ -21,6 +22,8 @@ namespace BusinessObject.Models
         public bool Discontinued { get; set; }
 
         public virtual Category? Category { get; set; }
+
+        [JsonIgnore]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
