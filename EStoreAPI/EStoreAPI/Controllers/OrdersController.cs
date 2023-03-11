@@ -29,6 +29,7 @@ namespace EStoreAPI.Controllers
             mapper = _mapper;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] PaginationParams @params, DateTime? from, DateTime? to)
         {
@@ -38,6 +39,7 @@ namespace EStoreAPI.Controllers
             return Ok(data.Select(mapper.Map<Order, OrderRes>).ToList());
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int? id)
         {
@@ -46,7 +48,7 @@ namespace EStoreAPI.Controllers
             return order is null ? NotFound() : Ok(mapper.Map<OrderRes>(order));
         }
 
-
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Post(Order? order, string? email)
         {
@@ -58,8 +60,9 @@ namespace EStoreAPI.Controllers
             return Ok(isSend);
         }
 
+        [Authorize]
         [HttpPost]
-        [Route("cancelorder/{id}")]]
+        [Route("cancelorder/{id}")]
         public async Task<IActionResult> CancelOrder(int? id)
         {
             if (id is null) return BadRequest();
@@ -71,6 +74,7 @@ namespace EStoreAPI.Controllers
             return Ok(isSave);
         }
 
+        [Authorize]
         [HttpPost]
         [Route("export")]
         public async Task<IActionResult> Export(int? id, string? email)
